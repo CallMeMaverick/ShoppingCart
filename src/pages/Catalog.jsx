@@ -1,29 +1,10 @@
 import { Link } from 'react-router-dom';
 import Header from "../components/Header.jsx";
-import {useState, useEffect} from "react";
+import {ProductContext} from "../context/ProductContext.jsx";
+import {useContext} from "react";
 
 export default function Catalog() {
-    const [products, setProducts] = useState([]);
-    const [error, setError] = useState(null);
-    const [isLoading, setIsLoading] = useState(true);
-
-    useEffect(() => {
-        async function extractItems() {
-            try {
-                const response = await fetch("https://fakestoreapi.com/products/category/electronics");
-                if (!response.ok) {
-                    throw new Error("Error fetching data");
-                }
-                const data = await response.json();
-                setProducts(data);
-                setIsLoading(false);
-            } catch (err) {
-                setError(err.message);
-                setIsLoading(false);
-            }
-        }
-        extractItems();
-    }, []);
+    const { products, isLoading, error } = useContext(ProductContext);
 
     return (
         <>
