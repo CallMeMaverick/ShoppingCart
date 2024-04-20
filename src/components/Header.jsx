@@ -11,7 +11,7 @@ export default function Header() {
             <nav className={"navigation"}>
                 <NavLink exact to={"/"} >Home</NavLink>
                 <NavLink exact to={"/catalog"}>Catalog</NavLink>
-                <NavLink exact to={"#"}>Cart</NavLink>
+                <NavLink exact to={"/cart"}>Cart</NavLink>
             </nav>
         </div>
     )
