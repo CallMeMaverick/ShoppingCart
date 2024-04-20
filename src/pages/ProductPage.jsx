@@ -1,10 +1,18 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import { useLocation } from 'react-router-dom';
 import Header from "../components/Header.jsx";
+import {CartContext} from "../context/CartContext.jsx";
 
 export default function ProductPage() {
     const location = useLocation();
     const product = location.state?.product;
+
+    const { addToCart } = useContext(CartContext);
+
+    const handleAddToCart = (itemId) => {
+        addToCart(itemId);
+        alert("Added!");
+    }
 
     if (!product) {
         return <div>No product found</div>;
@@ -24,7 +32,7 @@ export default function ProductPage() {
 
                         <div className={"product-price"}>
                             <h2>${product.price}</h2>
-                            <button>Buy</button>
+                            <button onClick={() => handleAddToCart(product.id)}>Buy</button>
                         </div>
                     </div>
                 </div>

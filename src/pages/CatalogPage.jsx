@@ -2,9 +2,16 @@ import { Link } from 'react-router-dom';
 import Header from "../components/Header.jsx";
 import {ProductContext} from "../context/ProductContext.jsx";
 import {useContext} from "react";
+import {CartContext} from "../context/CartContext.jsx";
 
 export default function CatalogPage() {
     const { products, isLoading, error } = useContext(ProductContext);
+    const { addToCart } = useContext(CartContext);
+
+    const handleAddToCart = (itemId) => {
+        addToCart(itemId);
+        alert("Added!");
+    }
 
     return (
         <>
@@ -21,7 +28,7 @@ export default function CatalogPage() {
                             <hr/>
                             <div className={"price-wrapper"}>
                                 <p>${product.price}</p>
-                                <button>Buy</button>
+                                <button onClick={() => handleAddToCart(product.id)}>Buy</button>
                             </div>
                         </div>
                     ))}

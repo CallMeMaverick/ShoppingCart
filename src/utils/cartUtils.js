@@ -1,5 +1,5 @@
 function getCart() {
-    const cart = localStorage.get("cart");
+    const cart = localStorage.getItem("cart");
     return cart ? JSON.parse(cart) : [];
 }
 
