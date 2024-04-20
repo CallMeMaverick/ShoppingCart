@@ -25,7 +25,7 @@ export default function HomePage() {
                         <div className={"buttons"}>
                             <Link className={"browse"} to={"#"}>Browse catalog</Link>
 
-                            <a href={"https://github.com/CallMeMaverick/ShoppingCart"} className={"github-link"}>
+                            <a href={"https://github.com/CallMeMaverick/ShoppingCart"} className={"github-link"} target={"_blank"}>
                                 <div className={"inner-svg"}>
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16"
                                          fill={"white"}>
@@ -37,7 +37,7 @@ export default function HomePage() {
                                 Github Repo
                             </a>
 
-                            <a href={"www.linkedin.com/in/sviatoslav-kushnierov-53950726b"} className={"linkedin-link"}>
+                            <a href={"www.linkedin.com/in/sviatoslav-kushnierov-53950726b"} className={"linkedin-link"} target={"_blank"}>
                                 <div className={"inner-svg"}>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
                                          fill={"white"}>
