@@ -23,7 +23,13 @@ export function addItem(item) {
 
 export function removeFromCart(itemId) {
     let cart = getCart();
-    cart = cart.filter((item) => item.id !== itemId);
+    const itemIndex = cart.findIndex((prod) => prod.id === itemId);
+
+    cart[itemIndex].quantity--;
+    if (cart[itemIndex].quantity <= 0) {
+        cart = cart.filter((item) => item.id !== itemId);
+    }
+
     saveCart(cart);
 }
 
