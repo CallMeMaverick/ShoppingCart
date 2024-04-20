@@ -36,7 +36,7 @@ export default function CartPage() {
                                 type="number"
                                 value={item.quantity}
                                 className="item-quantity"
-                                onChange={(e) => handleQuantityChange(item.id, parseInt(e.target.value, 10))}
+                                onChange={(e) => handleQuantityChange(item.id, parseInt(e.target.value) || 0)}
                             />
                             <button onClick={() => handleRemoveItem(item.id)}>Remove</button>
                         </div>

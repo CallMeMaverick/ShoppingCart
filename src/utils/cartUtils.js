@@ -33,14 +33,14 @@ export function removeFromCart(itemId) {
     saveCart(cart);
 }
 
-export function updateItemQuantity(itemId, quantity) {
+export function updateItemQuantity(itemId, quan) {
     const cart = getCart();
     const itemIndex = cart.findIndex((item) => item.id === itemId);
 
-    if (itemIndex <= 0) {
-        removeFromCart(itemId);
+    if (itemIndex < 0) {
+        cart.splice(itemIndex, 1);
     } else {
-        cart[itemIndex].quantity = quantity;
+        cart[itemIndex].quantity = quan;
     }
 
     saveCart(cart);
