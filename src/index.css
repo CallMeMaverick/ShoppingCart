@@ -280,4 +280,60 @@ header > p {
 .product > .price-wrapper > p {
     font-size: 17px;
 }
+
+.loading, .error {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    margin-top: 50px;
+    color: var(--first-color);
+}
+
+.description {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-desc {
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.product-desc > .product-text {
+    display: flex;
+    flex-direction: column;
+    margin: 30px;
+    padding: 50px;
+    gap: 20px;
+}
+
+.product-desc > .product-text > p {
+    font-size: 20px;
+}
+
+.product-text > .product-price {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.product-text > .product-price > button {
+    width: 200px;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    color: var(--first-color);
+    background-color: var(--third-color);
+}
+.product-text > .product-price > button:hover {
+    background-color: #3CA5B6FF;
+}
+
+.product-text > .product-price > h2 {
+    color: var(--third-color);
+}
+
 /* catalog */
