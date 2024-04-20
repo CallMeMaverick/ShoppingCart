@@ -1,13 +1,20 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
-import {createBrowserRouter, Route, RouterProvider} from "react-router-dom";
+import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import { routes } from "./router/routes.jsx";
+import {ProductProvider} from "./context/ProductContext.jsx";
 
 const router = createBrowserRouter(routes);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+
+      <ProductProvider>
+
+          <RouterProvider router={router} />
+
+      </ProductProvider>
+
   </React.StrictMode>,
 )
