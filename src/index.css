@@ -26,7 +26,7 @@ body {
     height: 100vh;
     display: flex;
     justify-content: center;
-    background-image: url("/Users/maverick/Desktop/ShoppingCart/src/assets/gradient-background-3840x2160-10974.jpg");
+    background-image: url("../public/gradient-background-3840x2160-10974.jpg");
 }
 
 #root {
@@ -210,7 +210,7 @@ header > p {
 }
 
 .header > div {
-    background-image: url("/Users/maverick/Desktop/ShoppingCart/src/assets/gradient-background-3840x2160-10974.jpg");
+    background-image: url("/public/gradient-background-3840x2160-10974.jpg");
 }
 /* main page */
 
