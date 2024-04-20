@@ -3,7 +3,7 @@ import Header from "../components/Header.jsx";
 import {ProductContext} from "../context/ProductContext.jsx";
 import {useContext} from "react";
 
-export default function Catalog() {
+export default function CatalogPage() {
     const { products, isLoading, error } = useContext(ProductContext);
 
     return (

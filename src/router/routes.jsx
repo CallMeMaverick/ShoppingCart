@@ -1,7 +1,8 @@
 import HomePage from "../pages/HomePage.jsx";
 import ErrorPage from "../pages/ErrorPage.jsx";
-import Catalog from "../pages/Catalog.jsx";
+import CatalogPage from "../pages/CatalogPage.jsx";
 import ProductPage from "../pages/ProductPage.jsx";
+import CartPage from "../pages/CartPage.jsx";
 
 export const routes = [
     {
@@ -11,10 +12,14 @@ export const routes = [
     },
     {
         path: "/catalog",
-        element: <Catalog />
+        element: <CatalogPage />
     },
     {
         path: "/catalog/product/:productId",
         element: <ProductPage />
+    },
+    {
+        path: "/cart",
+        element: <CartPage />
     }
 ];
