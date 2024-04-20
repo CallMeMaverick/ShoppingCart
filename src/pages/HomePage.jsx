@@ -1,9 +1,8 @@
 export default function HomePage() {
     return (
-        <div className={"homepage"}>
-            <header>
-                <h1>Hello!</h1>
-            </header>
-        </div>
+        <header>
+            <h1>TechTreasure</h1>
+            <p>Powering up your digital lifestyle</p>
+        </header>
     )
 }
