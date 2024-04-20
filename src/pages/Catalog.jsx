@@ -28,7 +28,7 @@ export default function Catalog() {
     return (
         <>
             <Header />
-            {isLoading ? <div><h1>Fetching data...</h1></div> : error ? <div><h1>❌ Error while fetching data: {error}</h1></div> :
+            {isLoading ? <div className={"loading"}><h1>Fetching data...</h1></div> : error ? <div className={"error"}><h1>❌ Error while fetching data: {error}</h1></div> :
                 <div className={"products-wrapper"}>
                     {products.map(product => (
                         <div className={"product"} key={product.id}>

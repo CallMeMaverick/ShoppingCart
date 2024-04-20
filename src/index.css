@@ -26,6 +26,7 @@ body {
     height: 100vh;
     display: flex;
     justify-content: center;
+    background-image: url("src/assets/gradient-background-3840x2160-10974.jpg");
 }
 
 #root {
@@ -34,7 +35,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: start;
-    background-image: url("src/assets/gradient-background-3840x2160-10974.jpg");
+    /*background-image: url("src/assets/gradient-background-3840x2160-10974.jpg");*/
 }
 
 /* error page */
@@ -236,7 +237,8 @@ header > p {
     flex-direction: column;
     justify-content: space-between;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.2s ease-out 100ms
+    transition: background-color 0.2s ease-out 100ms;
+    margin-bottom: 20px;
 }
 
 .products-wrapper > .product:hover {
