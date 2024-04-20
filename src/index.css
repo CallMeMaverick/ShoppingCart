@@ -210,7 +210,7 @@ header > p {
 }
 
 .header > div {
-    background-image: url("src/assets/gradient-background-3840x2160-10974.jpg");
+    background-image: url("/Users/maverick/Desktop/ShoppingCart/src/assets/gradient-background-3840x2160-10974.jpg");
 }
 /* main page */
 
@@ -462,3 +462,64 @@ header > p {
     text-decoration: underline;
 }
 /* order */
+
+
+@media screen and (max-width: 767px) {
+    .buttons > * {
+        text-align: center;
+    }
+
+    .description {
+        margin: 0;
+    }
+    .product-desc {
+        flex-direction: column;
+        justify-self: center;
+        display: flex;
+        align-self: center;
+    }
+
+    .product-desc > img {
+        width: 250px !important;
+        height: 250px !important;
+        align-self: center;
+        margin-top: 20px;
+    }
+
+    .product-text > .product-price > button {
+        width: 100px;
+    }
+
+    .product-text > .product-price > h2 {
+        color: white;
+    }
+
+    .cart {
+        width: 80%;
+    }
+
+    .cart > h2 {
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .cart-item {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .cart-item > img {
+        align-self: center;
+        margin: 0 0;
+    }
+
+    .cart-item > .item-details {
+        padding-bottom: 0;
+    }
+
+    .cart-item > .item-actions > button {
+        margin-bottom: 40px;
+    }
+}
