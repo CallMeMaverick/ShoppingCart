@@ -26,7 +26,7 @@ body {
     height: 100vh;
     display: flex;
     justify-content: center;
-    background-image: url("src/assets/gradient-background-3840x2160-10974.jpg");
+    background-image: url("/Users/maverick/Desktop/ShoppingCart/src/assets/gradient-background-3840x2160-10974.jpg");
 }
 
 #root {
@@ -35,7 +35,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: start;
-    /*background-image: url("src/assets/gradient-background-3840x2160-10974.jpg");*/
 }
 
 /* error page */
