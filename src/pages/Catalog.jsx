@@ -32,12 +32,16 @@ export default function Catalog() {
                 <div className={"products-wrapper"}>
                     {products.map(product => (
                         <div className={"product"} key={product.id}>
-                            <Link to={`/catalog/product/${product.id}`} state={{ product }}>
-                                <img src={product.image} alt={product.title} style={{ width: "100px" }} />
+                            <Link to={`/catalog/product/${product.id}`} state={{product}}>
+                                <img src={product.image} alt={product.title} style={{width: "100px"}}/>
                                 <h3>{product.title}</h3>
-                                <p>${product.price}</p>
                             </Link>
-                            <button>Buy</button>
+
+                            <hr/>
+                            <div className={"price-wrapper"}>
+                                <p>${product.price}</p>
+                                <button>Buy</button>
+                            </div>
                         </div>
                     ))}
                 </div>

@@ -277,6 +277,15 @@ header > p {
     transition: background-color 0.2s ease-out 100ms
 }
 
+.product > a {
+    text-decoration: none;
+}
+
+.product > a > h3 {
+    color: black;
+    font-size: 15px;
+}
+
 .product > .price-wrapper > p {
     font-size: 17px;
 }
