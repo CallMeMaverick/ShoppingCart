@@ -2,7 +2,7 @@
 
 :root {
     --first-color: #ececec;
-    --second-color: #9fd3c7;
+    --second-color: #efd510;
     --third-color: #385170;
     --forth-color: #142d4c;
 }
@@ -25,7 +25,6 @@ body {
     height: 100vh;
     display: flex;
     justify-content: center;
-
 }
 
 #root {
@@ -61,6 +60,14 @@ body {
 
 
 /* main page */
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
 header {
     width: 100%;
     padding: 20px;
@@ -81,5 +88,27 @@ header > h1 {
 header > p {
     font-size: 20px;
 }
+
+.navigation {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    font-size: 20px;
+    padding: 10px;
+    height: 100%;
+    background-color: var(--third-color);
+}
+
+.navigation > a {
+    color: var(--first-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navigation > a:hover {
+    color: var(--second-color);
+}
+
 
 /* main page */
