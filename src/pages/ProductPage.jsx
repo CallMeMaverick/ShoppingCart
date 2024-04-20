@@ -9,8 +9,8 @@ export default function ProductPage() {
 
     const { addToCart } = useContext(CartContext);
 
-    const handleAddToCart = (itemId) => {
-        addToCart(itemId);
+    const handleAddToCart = (item) => {
+        addToCart(item);
         alert("Added!");
     }
 
@@ -21,7 +21,6 @@ export default function ProductPage() {
     return (
         <>
             <Header />
-
             <div className={"description"}>
                 <div className={"product-desc"}>
                     <img src={product.image} alt={product.title} style={{width: "400px", height: "500px"}}/>
@@ -32,7 +31,7 @@ export default function ProductPage() {
 
                         <div className={"product-price"}>
                             <h2>${product.price}</h2>
-                            <button onClick={() => handleAddToCart(product.id)}>Buy</button>
+                            <button onClick={() => handleAddToCart(product)}>Buy</button>
                         </div>
                     </div>
                 </div>

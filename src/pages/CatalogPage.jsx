@@ -8,8 +8,8 @@ export default function CatalogPage() {
     const { products, isLoading, error } = useContext(ProductContext);
     const { addToCart } = useContext(CartContext);
 
-    const handleAddToCart = (itemId) => {
-        addToCart(itemId);
+    const handleAddToCart = (item) => {
+        addToCart(item);
         alert("Added!");
     }
 
@@ -28,7 +28,7 @@ export default function CatalogPage() {
                             <hr/>
                             <div className={"price-wrapper"}>
                                 <p>${product.price}</p>
-                                <button onClick={() => handleAddToCart(product.id)}>Buy</button>
+                                <button onClick={() => handleAddToCart(product)}>Buy</button>
                             </div>
                         </div>
                     ))}

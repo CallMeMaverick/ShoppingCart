@@ -17,14 +17,15 @@ export const CartProvider = ({ children }) => {
         setCart(cart);
     }
 
-    const handleAddToCart = (itemId) => {
-        addItem(itemId);
+    const handleAddToCart = (item) => {
+        addItem(item);
         // refresh the cart
         loadCart();
     }
 
     const handleRemoveFromCart = (itemId) => {
         removeFromCart(itemId);
+        // refresh the cart
         loadCart();
     }
 
@@ -38,7 +39,7 @@ export const CartProvider = ({ children }) => {
             cart,
             addToCart: handleAddToCart,
             removeFromCart: handleRemoveFromCart,
-            updateItemQuantity, handleUpdateQuantity
+            updateItemQuantity: handleUpdateQuantity
         }}>
             { children }
         </CartContext.Provider>
