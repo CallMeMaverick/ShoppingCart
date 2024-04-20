@@ -19,24 +19,32 @@ export default function CartPage() {
 
     return (
         <>
-            <Header />
-            <div>
+            <Header/>
+            <div className="cart">
                 <h1>Your Cart</h1>
                 {cart.map((item) => (
-                    <div key={item.id} className={"cart-item"}>
-                        <img src={item.image} style={{width: "100px", height: "100px"}}/>
-                        <h3>{item.title}</h3>
-                        <p>${item.price}</p>
-                        <input
-                            type="number"
-                            value={item.quantity}
-                            onChange={(e) => handleQuantityChange(item.id, parseInt(e.target.value))}
-                        />
-                        <button onClick={() => handleRemoveItem(item.id)}>Remove</button>
+                    <div key={item.id} className="cart-item">
+                        <img src={item.image} alt={item.title} className="item-image"/>
+
+                        <div className="item-details">
+                            <h3>{item.title}</h3>
+                            <p>${item.price}</p>
+                        </div>
+
+                        <div className="item-actions">
+                            <input
+                                type="number"
+                                value={item.quantity}
+                                className="item-quantity"
+                                onChange={(e) => handleQuantityChange(item.id, parseInt(e.target.value, 10))}
+                            />
+                            <button onClick={() => handleRemoveItem(item.id)}>Remove</button>
+                        </div>
                     </div>
                 ))}
                 <h2>Total: ${calculateTotal()}</h2>
             </div>
+
         </>
     );
 }
