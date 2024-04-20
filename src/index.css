@@ -5,6 +5,7 @@
     --second-color: #efd510;
     --third-color: #415d8a;
     --forth-color: #142d4c;
+    --highlight: #67e8f9;
 }
 
 .quicksand {
@@ -38,11 +39,13 @@ body {
 
 /* error page */
 .error-page {
+    color: var(--first-color);
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     gap: 2rem;
+    align-self: center;
 }
 
 .error-page > p, .error-page > a {
@@ -196,5 +199,8 @@ header > p {
     vertical-align: middle;
 }
 
+.highlight {
+    color: var(--highlight);
+}
 
 /* main page */

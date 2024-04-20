@@ -20,7 +20,7 @@ export default function HomePage() {
                         <h2>Electronics you were looking for</h2>
                         <p>Welcome to your one-stop shop for the latest and greatest in electronics! This platform
                             serves as
-                            a React development project aimed at creating a user-friendly, engaging online store.</p>
+                            a <span className={"highlight"}>React development project</span> aimed at creating a user-friendly, engaging online store.</p>
 
                         <div className={"buttons"}>
                             <Link className={"browse"} to={"#"}>Browse catalog</Link>
