@@ -42,10 +42,13 @@ export default function Catalog() {
             {!isLoading && !error && products.length > 0 && (
                 <div className={"products-wrapper"}>
                     {products.map(product => (
-                        <div key={product.id}>
-                            <h2>{product.title}</h2>
-                            <p>{product.description}</p>
-                            <img src={product.image} alt={product.title} style={{ width: "100px" }} />
+                        <div className={"product"} key={product.id}>
+                            <img src={product.image} alt={product.title} style={{width: "100px"}}/>
+                            <h3>{product.title}</h3>
+                            <div className={"price-wrapper"}>
+                                <p>{product.price}$</p>
+                                <button>Buy</button>
+                            </div>
                         </div>
                     ))}
                 </div>

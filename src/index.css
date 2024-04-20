@@ -211,7 +211,73 @@ header > p {
 
 .header > div {
     background-image: url("src/assets/gradient-background-3840x2160-10974.jpg");
+}
+/* main page */
 
+
+/* catalog */
+.products-wrapper {
+    margin: 20px;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    flex-direction: row;
+    gap: 40px;
 }
 
-/* main page */
+.products-wrapper > .product {
+    height: 300px;
+    width: 250px;
+    background: linear-gradient(to bottom, #ffffff 0%, #ffffff 100%);
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.2s ease-out 100ms
+}
+
+.products-wrapper > .product:hover {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+    transition: background-color 0.2s ease-out 100ms;
+    cursor: pointer;
+}
+
+
+.product > .price-wrapper {
+    color: var(--forth-color);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.product > img {
+    align-self: center;
+}
+
+.product > .price-wrapper > button {
+    height: 25px;
+    width: 40%;
+    background-color: var(--third-color);
+    color: var(--first-color);
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.2s ease-out 100ms
+}
+
+.product > .price-wrapper > button:hover {
+    height: 25px;
+    width: 40%;
+    background-color: #3CA5B6FF;
+    color: var(--first-color);
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.2s ease-out 100ms
+}
+
+.product > .price-wrapper > p {
+    font-size: 17px;
+}
+/* catalog */
