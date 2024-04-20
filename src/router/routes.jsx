@@ -3,6 +3,7 @@ import ErrorPage from "../pages/ErrorPage.jsx";
 import CatalogPage from "../pages/CatalogPage.jsx";
 import ProductPage from "../pages/ProductPage.jsx";
 import CartPage from "../pages/CartPage.jsx";
+import OrderMade from "../pages/OrderMade.jsx";
 
 export const routes = [
     {
@@ -21,5 +22,9 @@ export const routes = [
     {
         path: "/cart",
         element: <CartPage />
+    },
+    {
+        path: "/order",
+        element: <OrderMade />
     }
 ];

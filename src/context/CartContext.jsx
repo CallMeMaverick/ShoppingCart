@@ -1,5 +1,5 @@
 import {createContext, useEffect, useState} from "react";
-import { getItems, addItem, removeFromCart, updateItemQuantity } from '../utils/cartUtils';
+import { getItems, addItem, removeFromCart, updateItemQuantity, saveCart} from '../utils/cartUtils';
 import PropTypes from "prop-types";
 
 
@@ -29,6 +29,13 @@ export const CartProvider = ({ children }) => {
         loadCart();
     }
 
+    // Inside your CartContext
+    const clearCart = () => {
+        setCart([]);
+        saveCart([]);
+    };
+
+
     const handleUpdateQuantity = (itemId, quantity) => {
         updateItemQuantity(itemId, quantity);
         loadCart();
@@ -39,7 +46,8 @@ export const CartProvider = ({ children }) => {
             cart,
             addToCart: handleAddToCart,
             removeFromCart: handleRemoveFromCart,
-            updateItemQuantity: handleUpdateQuantity
+            updateItemQuantity: handleUpdateQuantity,
+            clearCart: clearCart
         }}>
             { children }
         </CartContext.Provider>

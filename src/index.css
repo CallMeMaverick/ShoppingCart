@@ -387,7 +387,7 @@ header > p {
     align-items: center;
 }
 
-.item-actions > button {
+.item-actions > button, .make-order > button {
     width: 100%;
     background-color: var(--third-color);
     color: var(--first-color);
@@ -401,4 +401,65 @@ header > p {
     margin-bottom: 10px;
 }
 
+.make-order {
+    text-decoration: none;
+}
+
+.make-order > button {
+    width: 150px;
+    height: 50px;
+    font-size: 20px;
+    transition: background-color 0.2s ease-out 100ms;
+    font-weight: normal;
+}
+
+.make-order > button:hover {
+    background-color: #3CA5B6FF;
+    transition: background-color 0.2s ease-out 100ms;
+    font-weight: bold;
+}
+
+.make-order {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    margin-top: 20px;
+}
 /* cart */
+
+/* order */
+.order-made {
+    color: white;
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+    align-items: center;
+    justify-self: center;
+}
+
+.order-made > * {
+    margin: 20px;
+}
+
+.order-made > h1 {
+    font-size: 60px;
+}
+
+.order-made > p {
+    font-size: 30px;
+}
+
+.order-made > span {
+    color: #22d3ee;
+    font-size: 20px;
+}
+
+.return-main {
+    text-decoration: none;
+    color: #22d3ee;
+}
+
+.return-main:hover {
+    text-decoration: underline;
+}
+/* order */

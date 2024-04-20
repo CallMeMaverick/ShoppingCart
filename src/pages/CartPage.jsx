@@ -1,9 +1,10 @@
 import { useContext } from 'react';
 import {CartContext} from "../context/CartContext.jsx";
 import Header from "../components/Header.jsx";
+import {Link} from "react-router-dom";
 
 export default function CartPage() {
-    const { cart, removeFromCart, updateItemQuantity } = useContext(CartContext);
+    const { cart, removeFromCart, updateItemQuantity, clearCart } = useContext(CartContext);
 
     const handleRemoveItem = (itemId) => {
         removeFromCart(itemId);
@@ -44,7 +45,9 @@ export default function CartPage() {
                 ))}
                 <h2>Total: ${calculateTotal()}</h2>
             </div>
-
+            <Link to={"/order"} className={"make-order"}>
+                <button onClick={() => clearCart()}>Order</button>
+            </Link>
         </>
     );
 }

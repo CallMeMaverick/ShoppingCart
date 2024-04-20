@@ -3,7 +3,7 @@ function getCart() {
     return cart ? JSON.parse(cart) : [];
 }
 
-function saveCart(cart) {
+export function saveCart(cart) {
     localStorage.setItem("cart", JSON.stringify(cart));
 }
 
@@ -33,14 +33,15 @@ export function removeFromCart(itemId) {
     saveCart(cart);
 }
 
-export function updateItemQuantity(itemId, quan) {
+export function updateItemQuantity(itemId, quantity) {
     const cart = getCart();
     const itemIndex = cart.findIndex((item) => item.id === itemId);
 
-    if (itemIndex < 0) {
+    if (cart[itemIndex].quantity <= 0) {
         cart.splice(itemIndex, 1);
+        saveCart(cart)
     } else {
-        cart[itemIndex].quantity = quan;
+        cart[itemIndex].quantity = quantity;
     }
 
     saveCart(cart);
@@ -48,4 +49,10 @@ export function updateItemQuantity(itemId, quan) {
 
 export function getItems() {
     return getCart();
+}
+
+export function clearCart() {
+    let cart = getCart();
+    // cart = [];
+    saveCart(cart);
 }
